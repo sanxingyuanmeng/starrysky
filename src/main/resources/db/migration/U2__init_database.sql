@@ -6,7 +6,5 @@ CREATE TABLE `invited_account` (
   `invated_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '邀请时间',
   `_mt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `invated_id` (`invated_userid`) USING BTREE,
-
+  UNIQUE KEY `invated_id` (`invated_userid`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='用户邀请表';
-/*!40101 SET character_set_client = @saved_cs_client */;

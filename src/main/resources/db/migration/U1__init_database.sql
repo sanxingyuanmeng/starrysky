@@ -20,4 +20,3 @@ CREATE TABLE `users_account` (
   KEY `idx_last_login` (`last_login`) USING BTREE,
   KEY `idx_mt` (`_mt`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='用户账号表';
-/*!40101 SET character_set_client = @saved_cs_client */;
