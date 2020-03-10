@@ -4,10 +4,11 @@ package com.yuanmeng.starrysky.model;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-public class Goods {
+public class Goods implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
