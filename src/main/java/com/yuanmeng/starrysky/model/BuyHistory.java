@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class BugHistory {
+public class BuyHistory {
 
     @Id
     @GeneratedValue
