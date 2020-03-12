@@ -65,10 +65,115 @@ public class User implements Serializable {
     @Column(name="_mt", nullable = false, columnDefinition = "datetime DEFAULT CURRENT_TIMESTAMP")
     private Date _mt;
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public String getOpenId() {
+        return openId;
+    }
 
+    public void setOpenId(String openId) {
+        this.openId = openId;
+    }
 
+    public String getUnionId() {
+        return unionId;
+    }
 
+    public void setUnionId(String unionId) {
+        this.unionId = unionId;
+    }
 
+    public String getNikeName() {
+        return nikeName;
+    }
+
+    public void setNikeName(String nikeName) {
+        this.nikeName = nikeName;
+    }
+
+    public String getBindPhone() {
+        return bindPhone;
+    }
+
+    public void setBindPhone(String bindPhone) {
+        this.bindPhone = bindPhone;
+    }
+
+    public String getHeadIcon() {
+        return headIcon;
+    }
+
+    public void setHeadIcon(String headIcon) {
+        this.headIcon = headIcon;
+    }
+
+    public Integer getGender() {
+        return gender;
+    }
+
+    public void setGender(Integer gender) {
+        this.gender = gender;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public Date getJoinDate() {
+        return joinDate;
+    }
+
+    public void setJoinDate(Date joinDate) {
+        this.joinDate = joinDate;
+    }
+
+    public Date getLastLogin() {
+        return lastLogin;
+    }
+
+    public void setLastLogin(Date lastLogin) {
+        this.lastLogin = lastLogin;
+    }
 }

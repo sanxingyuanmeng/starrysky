@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class UGC {
+public class Ugc {
 
     @Id
     @GeneratedValue
@@ -33,4 +33,43 @@ public class UGC {
     @Column(name = "_mt", nullable = false, columnDefinition = "datetime DEFAULT CURRENT_TIMESTAMP")
     private Date _mt;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getGoodsId() {
+        return goodsId;
+    }
+
+    public void setGoodsId(Long goodsId) {
+        this.goodsId = goodsId;
+    }
+
+    public Long getSourceUserid() {
+        return sourceUserid;
+    }
+
+    public void setSourceUserid(Long sourceUserid) {
+        this.sourceUserid = sourceUserid;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 }
