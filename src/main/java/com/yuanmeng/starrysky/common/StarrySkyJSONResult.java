@@ -24,45 +24,45 @@ public class StarrySkyJSONResult {
     
     private String ok;	// 不使用
 
-    public static IMoocJSONResult build(Integer status, String msg, Object data) {
-        return new IMoocJSONResult(status, msg, data);
+    public static StarrySkyJSONResult build(Integer status, String msg, Object data) {
+        return new StarrySkyJSONResult(status, msg, data);
     }
 
-    public static IMoocJSONResult ok(Object data) {
-        return new IMoocJSONResult(data);
+    public static StarrySkyJSONResult ok(Object data) {
+        return new StarrySkyJSONResult(data);
     }
 
-    public static IMoocJSONResult ok() {
-        return new IMoocJSONResult(null);
+    public static StarrySkyJSONResult ok() {
+        return new StarrySkyJSONResult(null);
     }
     
-    public static IMoocJSONResult errorMsg(String msg) {
-        return new IMoocJSONResult(500, msg, null);
+    public static StarrySkyJSONResult errorMsg(String msg) {
+        return new StarrySkyJSONResult(500, msg, null);
     }
     
-    public static IMoocJSONResult errorMap(Object data) {
-        return new IMoocJSONResult(501, "error", data);
+    public static StarrySkyJSONResult errorMap(Object data) {
+        return new StarrySkyJSONResult(501, "error", data);
     }
     
-    public static IMoocJSONResult errorTokenMsg(String msg) {
-        return new IMoocJSONResult(502, msg, null);
+    public static StarrySkyJSONResult errorTokenMsg(String msg) {
+        return new StarrySkyJSONResult(502, msg, null);
     }
     
-    public static IMoocJSONResult errorException(String msg) {
-        return new IMoocJSONResult(555, msg, null);
+    public static StarrySkyJSONResult errorException(String msg) {
+        return new StarrySkyJSONResult(555, msg, null);
     }
 
-    public IMoocJSONResult() {
+    public StarrySkyJSONResult() {
 
     }
 
-    public IMoocJSONResult(Integer status, String msg, Object data) {
+    public StarrySkyJSONResult(Integer status, String msg, Object data) {
         this.status = status;
         this.msg = msg;
         this.data = data;
     }
 
-    public IMoocJSONResult(Object data) {
+    public StarrySkyJSONResult(Object data) {
         this.status = 200;
         this.msg = "OK";
         this.data = data;
