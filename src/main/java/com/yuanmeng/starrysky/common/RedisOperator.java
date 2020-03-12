@@ -1,4 +1,4 @@
-package com.imooc.common;
+package com.yuanmeng.starrysky.common;
 
 import java.util.Map;
 import java.util.Set;
@@ -11,11 +11,9 @@ import org.springframework.stereotype.Component;
 /**
  * @Description: 使用redisTemplate的操作实现类 
  */
+
 @Component
 public class RedisOperator {
-	
-//	@Autowired
-//    private RedisTemplate<String, Object> redisTemplate;
 	
 	@Autowired
 	private StringRedisTemplate redisTemplate;
