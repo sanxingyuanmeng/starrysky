@@ -1,4 +1,4 @@
-package com.imooc.common;
+package com.yuanmeng.starrysky.common;
 
 import java.io.IOException;
 import java.net.URI;

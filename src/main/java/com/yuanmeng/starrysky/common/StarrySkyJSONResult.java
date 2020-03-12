@@ -1,4 +1,4 @@
-package com.imooc.common;
+package com.yuanmeng.starrysky.common;
 
 /**
  * @Description: 自定义响应数据结构
@@ -11,7 +11,7 @@ package com.imooc.common;
  * 				502：拦截器拦截到用户token出错
  * 				555：异常抛出信息
  */
-public class IMoocJSONResult {
+public class StarrySkyJSONResult {
 
     // 响应业务状态
     private Integer status;
