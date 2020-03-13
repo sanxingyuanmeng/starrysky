@@ -51,7 +51,7 @@ public class Goods implements Serializable {
     @Column(nullable = false)
     private String contentTitle;
 
-    @Column(nullable = false, length=1024)
+    @Column(nullable = true, length=1024)
     private String content;
 
     @CreationTimestamp
