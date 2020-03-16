@@ -2,7 +2,7 @@ package com.yuanmeng.starrysky.common;
 
 
 
-import com.github.pagehelper.Page;
+//import com.github.pagehelper.Page;
 
 import java.util.HashMap;
 import java.util.List;
@@ -58,8 +58,7 @@ public class ResponseUtils {
         return resp;
     }
 
-
-
+/*
     public static Object okList(List list, Page pagedList){
         Map<String, Object> data = new HashMap<String, Object>();
         data.put("list", list);
@@ -79,6 +78,8 @@ public class ResponseUtils {
         return ok(data);
 
     }
+
+ */
 
     public static Object fail(){
         Map<String, Object> obj = new HashMap<String, Object>();
