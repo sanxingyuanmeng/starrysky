@@ -17,4 +17,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/goodsBrowseHistory")
 public class GoodsBrowseHistoryController {
 
+
 }

@@ -6,6 +6,8 @@ import com.yuanmeng.starrysky.service.GoodsService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
  * <p>
  * 商品表 服务实现类
