@@ -48,8 +48,7 @@ public class UserController {
     }
 
     @RequestMapping(path="/login")
-    public Object login(wxLoginInfo wxLogInfo, HttpServletRequest request){
-
+    public Object login(@RequestBody wxLoginInfo wxLogInfo, HttpServletRequest request){
         String code = wxLogInfo.getCode();
         String iv = wxLogInfo.getIv();
         String   encryptedData = wxLogInfo.getEncryptedData();
@@ -73,7 +72,7 @@ public class UserController {
 
         //存储用户信息
         JSONObject wxUserInfoJson = JSONObject.parseObject(UserInfo);
-        String openId = wxUserInfoJson.getString("open_id");
+        String openId = wxUserInfoJson.getString("openId");
         if(null == openId){
             return ResponseUtils.fail(402, "get openId fail");
         }
@@ -93,10 +92,12 @@ public class UserController {
             user.setGender(wxUserInfoJson.getInteger("gender"));
             user.setNickname(wxUserInfoJson.getString("nickName"));
             user.setHeadIcon(wxUserInfoJson.getString("avatarUrl"));
+            user.setProvince(wxUserInfoJson.getString("province"));
             LocalDateTime now = LocalDateTime.now();
             user.setJoinDate(now);
             user.setCreateTime(now);
             user.setUpdateTime(now);
+            user.setLastLogin(now);
             user.setType(0);
             userService.save(user);
 
@@ -114,6 +115,8 @@ public class UserController {
         Map<Object, Object> result = new HashMap<Object, Object>();
         result.put("token", token);
         result.put("userInfo", wxUserInfoJson);
+        result.put("id", user.getId());
+        System.out.println(result);
         return ResponseUtils.ok(result);
     }
 

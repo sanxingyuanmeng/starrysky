@@ -54,7 +54,7 @@ public class ResponseUtils {
         Map <String, Object> resp = new HashMap<String, Object>();
         resp.put("errno", 0);
         resp.put("errmsg", "成功");
-        resp.put("data", data);
+        resp.put("result", data);
         return resp;
     }
 
