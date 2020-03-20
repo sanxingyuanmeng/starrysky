@@ -53,13 +53,13 @@ public class ShiroConfig {
         map.put("/invitedAccount/**", "anon");
         map.put("/platform/**", "anon");
         //登出
-        map.put("/logout", "logout");
+        map.put("/adminlogout", "logout");
         //对所有用户认证
         map.put("/**", "authc");
         //登录
-        shiroFilterFactoryBean.setLoginUrl("/login");
+        shiroFilterFactoryBean.setLoginUrl("/admin/auth/login");
         //首页
-        shiroFilterFactoryBean.setSuccessUrl("/index");
+        shiroFilterFactoryBean.setSuccessUrl("/admin/index");
         //错误页面，认证不通过跳转
         shiroFilterFactoryBean.setUnauthorizedUrl("/error");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
